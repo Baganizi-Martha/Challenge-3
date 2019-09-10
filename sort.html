@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sorting Arrays</h2>
+    <p id="input"></p>
+    <p id="object"></p>
+    <script>
+    var array = [1,2,3,4,5,6,7,8,9,"a","b","c"];
+    sort (array);
+    
+    function sort(nums){
+        var evens = [];
+        var odds = [];
+        var xters = [];
+        
+        for (var x = 0; x < nums.length; x++){
+            if (nums[x] % 2===0) {
+                evens.push(nums[x]);
+            } else if (nums[x]%2===1) {
+                xters.push(nums[x]);
+            } else {
+                odds.push(nums[x]);
+            }
+        } 
+        document.getElementById("input").innerHTML = "Input members:" + array;
+        document.getElementById("object").innerHTML = "(evens: [" + evens.toString() + "],<br>"+" odds: [" + odds.toString() + "],<br>"  +  "char : ["+xters+"])";
+    }
+    </script>
+</body>
+</html>
